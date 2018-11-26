@@ -24,7 +24,7 @@ public class Sender {
 			final Channel ch = conn.createChannel();
 
 			ch.queueDeclare("SimpleGaussElimination", false, false, false, null);
-			
+			System.out.println("Waiting for procedure...");
 			StringRpcServer server = new StringRpcServer(ch, "SimpleGaussElimination") {
 				@Override
 				public String handleStringCall(String request) {
